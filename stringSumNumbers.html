@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sandbox</title>
+  </head>
+  <body>
+    <h3>Sum numbers that can be converted from strings or zero</h3>
+    <p>["mama", "3", "3", "5"]</p>
+
+    <button onclick="sumNumbers()">Try it</button>
+    <p id="demo"></p>
+    <script>
+      const numbers = ["mama", "3", "3", "5"];
+      function sumNumbers() {
+        y = document.getElementById("demo");
+        y.innerHTML = numbers.reduce((acc, x) => (acc += parseInt(x) || 0), 0);
+      }
+    </script>
+  </body>
+</html>

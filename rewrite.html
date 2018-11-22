@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rewrite</title>
-  </head>
-  <body>
-    <h3>Rewrite without if, switch or ternary operator</h3>
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Rewrite</title>
+</head>
+
+<body>
+  <h3>Rewrite without if, switch or ternary operator</h3>
+  <!--
       const f1 = () => console.log('f1');
       const f2 = () => console.log('f2');
       const f3 = () => console.log('f3');
@@ -22,21 +24,19 @@
           }
       }
     -->
+  <h2 id="demo"></h2>
 
-    <h2 id="demo"></h2>
-    <script>
-      const options = [
-        { digit: 1, res: "f1" },
-        { digit: 2, res: "f2" },
-        { digit: 5, res: "f3" }
-      ];
+  <script>
+    var number = 5;
+    const options = [
+      { digit: 1, res: "f1" },
+      { digit: 2, res: "f2" },
+      { digit: 5, res: "f3" }
+    ];
+    const result = options.find(f => f.digit === number);
+    document.getElementById("demo").innerHTML = result.res;
+  </script>
 
-      var number = 5;
+</body>
 
-      const result = options.find(f => f.digit === number);
-
-      console.log(result);
-      document.getElementById("demo").innerHTML = result.res;
-    </script>
-  </body>
 </html>

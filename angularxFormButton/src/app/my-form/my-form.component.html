@@ -1,16 +1,17 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<h3>Hi there {{name}}</h3> 
 
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
   <label>
-    User Name:
+    <h3>User name:</h3> 
     <input type="text" formControlName="userName">
   </label>
 
   <label>
-    Password:
+    <h3>Password:</h3>
     <input type="password" formControlName="password">
   </label>
 
   <button type="submit" [disabled]='!profileForm.valid'>Submit</button>
-
 
 </form>

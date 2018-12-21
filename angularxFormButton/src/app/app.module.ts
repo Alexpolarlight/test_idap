@@ -1,22 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '@angular/http';
+
+
 import { AppComponent } from './app.component';
-import { MyFormComponent } from './my-form/my-form.component';
+import { NewFormComponent } from './components/new-form/new-form.component';
+
+import {DataService} from './services/data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFormComponent
+    NewFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

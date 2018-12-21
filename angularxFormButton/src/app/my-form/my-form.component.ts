@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -8,17 +7,15 @@ import { FormGroup, FormControl } from '@angular/forms';
     styleUrls: ['./my-form.component.scss']
 })
 export class MyFormComponent implements OnInit {
-
-    profileForm = new FormGroup({
-        userName: new FormControl(''),
-        password: new FormControl(''),
-    })
+    name:string = 'Dude'; 
+    
+    constructor(){};
 
     onSubmit() {
         alert("Valar Morghulis!");
     }
 
     ngOnInit() {
+        this.name = "Mate";
     }
-
 }
